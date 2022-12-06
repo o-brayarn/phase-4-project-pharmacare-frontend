@@ -1,7 +1,11 @@
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
-      <h1>PharmaCare</h1>
+      <Home />
     </div>
   );
 }
