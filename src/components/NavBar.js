@@ -43,4 +43,4 @@ export default function NavBar({ user, setUser }) {
       </div>
     </Router>
   );
-      }
+}
