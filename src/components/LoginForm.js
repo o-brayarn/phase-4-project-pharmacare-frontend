@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function LoginForm() {
   return (
@@ -41,7 +42,7 @@ export default function LoginForm() {
         Forgot <a href="reset">password?</a>
       </p>
       <p className="forgot-password">
-        Don't have an account? <a href="register">Register</a>
+        Don't have an account? <NavLink to="/register">Register</NavLink>
       </p>
     </form>
   );

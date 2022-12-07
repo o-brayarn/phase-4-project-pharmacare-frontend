@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function RegisterForm() {
   return (
@@ -9,27 +10,31 @@ export default function RegisterForm() {
         <input
           type="text"
           className="form-control"
-          placeholder="Enter your Fullname"
+          placeholder="Enter your name"
         />
       </div>
       <div className="mb-3">
         <label>Location</label>
-        <input type="text" className="form-control" placeholder="Location" />
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter your location"
+        />
       </div>
       <div className="mb-3">
         <label>Email address</label>
         <input
           type="email"
           className="form-control"
-          placeholder="Enter email"
+          placeholder="Enter your email"
         />
       </div>
       <div className="mb-3">
-        <label>Contact</label>
+        <label>Phone Number</label>
         <input
           type="text"
           className="form-control"
-          placeholder="Contact details"
+          placeholder="Enter your phone number"
         />
       </div>
       <div className="mb-3">
@@ -54,7 +59,8 @@ export default function RegisterForm() {
         </button>
       </div>
       <p className="forgot-password text-right">
-        Already registered?<a href="/sign-in">Login</a>
+        Already registered?
+        <NavLink to="/login"> Login</NavLink>
       </p>
     </form>
   );
