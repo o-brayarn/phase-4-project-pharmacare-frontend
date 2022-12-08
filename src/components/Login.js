@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function Login({ setUser }) {
   const nav = useNavigate();
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/login", {
@@ -15,12 +14,18 @@ export default function Login({ setUser }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        email,
+        password,
+      }),
     })
       .then((res) => {
         if (res.ok) {
-          res.json().then((user) => setUser(user));
-          nav("/pharmacies");
+          res.json().then((user) => {
+            setUser(user);
+            nav("/pharmacies");
+            localStorage.setItem("me", JSON.stringify(user));
+          });
         }
       })
       .catch((e) => {
@@ -29,23 +34,29 @@ export default function Login({ setUser }) {
   }
 
   return (
-    <form onChange={setFormData} onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <h3>Login</h3>
       <div className="mb-3">
         <label>Email address</label>
         <input
+          id="email"
           type="email"
           className="form-control"
           placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
       </div>
       <div className="mb-3">
         <label>Password</label>
         <input
+          id="password"
           type="password"
           className="form-control"
           placeholder="Enter password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
       </div>
