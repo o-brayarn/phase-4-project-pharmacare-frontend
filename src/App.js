@@ -1,9 +1,11 @@
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Route, Routes } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-// import NavBar from "./components/NavBar";
-import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import { Routes, Route } from "react-router-dom";
+import PharmacyPage from "./components/PharmacyPage";
 function App() {
   const [user, setUser] = useState(null);
 
@@ -14,25 +16,32 @@ function App() {
       }
     });
   }, []);
-
-  // if (!user) return <Login onLogin={setUser} />;
   return (
-    <div className="App">
-      <Home />
+    <>
       {/* <NavBar user={user} setUser={setUser} /> */}
-      {/* <main> */}
-      {/* <Router> */}
-      {/* <Routes> */}
-      {/* <Route exact path="/" element={<Home user={user} />} /> */}
-      {/* <Route
-              exact
-              path="/pharmacy"
-              element={<PharmacyPage user={user} />}
-            /> */}
-      {/* </Routes> */}
-      {/* </Router> */}
-      {/* </main> */}
-    </div>
+      <main>
+        {user ? (
+          <Routes>
+            <Route path="/pharmacies" element={<PharmacyPage />} />
+          </Routes>
+        ) : (
+          <div className="Home">
+            <div className="auth-wrapper">
+              <div className="auth-inner">
+                <Routes>
+                  <Route exact path="/" element={<Login />} />
+                  <Route path="/login" element={<Login user={user} />} />
+                  <Route
+                    path="/register"
+                    element={<Register setUser={setUser} />}
+                  />
+                </Routes>
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
+    </>
   );
 }
 
