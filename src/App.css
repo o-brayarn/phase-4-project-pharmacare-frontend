@@ -9,3 +9,10 @@
   margin-left: 40pc;
   border-radius: 9px;
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18rem;
+  margin: 2px;
+}
