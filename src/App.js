@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import PharmacyPage from "./components/PharmacyPage";
 function App() {
@@ -18,19 +19,22 @@ function App() {
   }, []);
   return (
     <>
-      {/* <NavBar user={user} setUser={setUser} /> */}
+      <NavBar user={user} setUser={setUser} />
       <main>
         {user ? (
-          <Routes>
-            <Route path="/pharmacies" element={<PharmacyPage />} />
-          </Routes>
+          <>
+            <Routes>
+              <Route path="/pharmacies" element={<PharmacyPage />} />
+              {/* <Route path="/" element={<PharmacyPage />} /> */}
+            </Routes>
+          </>
         ) : (
           <div className="Home">
             <div className="auth-wrapper">
               <div className="auth-inner">
                 <Routes>
                   <Route exact path="/" element={<Login />} />
-                  <Route path="/login" element={<Login user={user} />} />
+                  <Route path="/login" element={<Login setUser={setUser} />} />
                   <Route
                     path="/register"
                     element={<Register setUser={setUser} />}

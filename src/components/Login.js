@@ -23,6 +23,7 @@ export default function Login({ setUser }) {
         if (res.ok) {
           res.json().then((user) => {
             setUser(user);
+            console.log(user);
             nav("/pharmacies");
             localStorage.setItem("me", JSON.stringify(user));
           });

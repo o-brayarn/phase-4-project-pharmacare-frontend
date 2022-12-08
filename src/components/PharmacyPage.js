@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import NavBar from "./NavBar";
 import PharmacyCard from "./PharmacyCard";
 export default function PharmacyPage() {
   const [pharmacies, setPharmacies] = useState([]);
@@ -11,11 +10,16 @@ export default function PharmacyPage() {
   console.log(pharmacies);
 
   return (
-    <>
-      {/* <NavBar /> */}
-      {pharmacies.map((pharmacy) => {
-        return <PharmacyCard key={pharmacy.id} pharmacy={pharmacy} />;
-      })}
-    </>
+    <div className="container">
+      <div className="row">
+        {pharmacies.map((pharmacy) => {
+          return (
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <PharmacyCard key={pharmacy.id} pharmacy={pharmacy} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }

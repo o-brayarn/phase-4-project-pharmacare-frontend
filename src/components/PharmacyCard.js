@@ -1,5 +1,5 @@
 import React from "react";
-// import { Card } from "react-bootstrap";
+// import { Card, CardGroup } from "react-bootstrap";
 
 export default function PharmacyCard({ pharmacy }) {
   return (
