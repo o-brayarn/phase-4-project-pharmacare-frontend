@@ -1,6 +1,6 @@
 # **PharmaCare**
 
-## By Brayarn Oduor
+### By Brayarn Oduor
 
 ## **Description**
 
@@ -8,7 +8,11 @@
 
 <p> <strong>PharmaCare </strong> allows users (patients) to directly order drugs based on their prescription from the website from a list of available pharmacies, and delivered to their doorstep.</p>
 
-## Design
+### **Link to site**
+
+<a href="https://phase-4-project-pharmacare-frontend.vercel.app/">Pharmacare</a>
+
+## **Design**
 
 ![myimage-alt-tag](./public/Login-page.jpeg)
 ![myimage-alt-tag](./public/Reg-page.jpeg)
@@ -16,14 +20,10 @@
 ![myimage-alt-tag](./public/Medicine-catalogue.jpeg)
 ![myimage-alt-tag](./public/Order-page.jpeg)
 
-## Screenshots
+## **Screenshots**
 
 ![myimage-alt-tag](./public/signup.jpeg)
 ![myimage-alt-tag](./public/registration.jpeg)
-
-### Link to site
-
-<a href="https://phase-4-project-pharmacare-frontend.vercel.app/">Pharmacare</a>
 
 ## **Installation**
 
@@ -47,11 +47,11 @@ npm install
 npm start
 ```
 
-## Tools Used
+## **_Tools Used_**
 
-- **main:** react.js, ruby on rails, postgresql on rails
-- **UI:** bootstrap, css
-- other libraries: react-router-dom, db.json
+- **main:** _react.js, ruby on rails, postgresql on rails_
+- **UI:** _bootstrap, css_
+- other libraries: _react-router-dom_
 
 ## Known Bugs
 
