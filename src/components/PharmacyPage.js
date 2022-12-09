@@ -7,7 +7,7 @@ export default function PharmacyPage() {
       .then((res) => res.json())
       .then((pharmacy) => setPharmacies(pharmacy));
   }, []);
-  console.log(pharmacies);
+  // console.log(pharmacies);
 
   return (
     <div className="container">

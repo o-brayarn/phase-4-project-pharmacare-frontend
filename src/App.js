@@ -7,6 +7,7 @@ import Register from "./components/Register";
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import PharmacyPage from "./components/PharmacyPage";
+// import Catalogue from "./components/Catalogue";
 function App() {
   const [user, setUser] = useState(null);
 
@@ -25,7 +26,6 @@ function App() {
           <>
             <Routes>
               <Route path="/pharmacies" element={<PharmacyPage />} />
-              {/* <Route path="/" element={<PharmacyPage />} /> */}
             </Routes>
           </>
         ) : (
@@ -39,6 +39,7 @@ function App() {
                     path="/register"
                     element={<Register setUser={setUser} />}
                   />
+                  {/* <Route path="/catalogue" element={<Catalogue />} /> */}
                 </Routes>
               </div>
             </div>

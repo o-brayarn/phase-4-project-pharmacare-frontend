@@ -16,11 +16,13 @@
 
 ## **Design**
 
-![myimage-alt-tag](./public/Login-page.jpeg)
+Check design on <a href="https://miro.com/app/board/uXjVP89V454=/?share_link_id=119761630342">Miro</a>
+
+<!-- ![myimage-alt-tag](./public/Login-page.jpeg)
 ![myimage-alt-tag](./public/Reg-page.jpeg)
 ![myimage-alt-tag](./public/homepage-all.jpeg)
 ![myimage-alt-tag](./public/Medicine-catalogue.jpeg)
-![myimage-alt-tag](./public/Order-page.jpeg)
+![myimage-alt-tag](./public/Order-page.jpeg) -->
 
 ## **Screenshots**
 
@@ -57,7 +59,15 @@ npm start
 
 ## Known Bugs
 
-- Some functionalities and features break when deployed.
+    - Some functionalities and features break when deployed.
+    - Persistent error on Catalogue fetch (to be fixed)
+
+## Future Versions
+
+    - Make the user interface more presentable
+    - Enable Admin and User authentication & authorization
+    - Create a admin privileges and user interface
+    - Add chat functionalities
 
 ## License
 
