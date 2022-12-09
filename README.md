@@ -10,9 +10,12 @@
 
 ### **Link to site**
 
-<a href="https://phase-4-project-pharmacare-frontend.vercel.app/">Pharmacare</a>
+- <a href="https://phase-4-project-pharmacare-frontend.vercel.app/">Pharmacare</a>
 
-<a href="https://github.com/o-brayarn/phase-4-project-pharmacare-backend">Link to the Backend Repo</a>
+- <a href="https://github.com/o-brayarn/phase-4-project-pharmacare-backend">Link to the Backend Repo</a>
+
+- Here's a link to test the API endpoints:
+  <a href="https://pharmacare-api-production.up.railway.app/">https://pharmacare-api-production.up.railway.app</a>
 
 ## **Design**
 
