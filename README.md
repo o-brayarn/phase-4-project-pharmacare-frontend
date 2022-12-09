@@ -12,6 +12,8 @@
 
 <a href="https://phase-4-project-pharmacare-frontend.vercel.app/">Pharmacare</a>
 
+<a href="https://github.com/o-brayarn/phase-4-project-pharmacare-backend">Link to the Backend Repo</a>
+
 ## **Design**
 
 ![myimage-alt-tag](./public/Login-page.jpeg)
