@@ -6,7 +6,7 @@ export default function Register({ setUser }) {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [email, setEmail] = useState("");
-  const [phone_number, setPhoneNumber] = useState("");
+  const [phone_number, setPhone_Number] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
@@ -25,15 +25,19 @@ export default function Register({ setUser }) {
         password,
         password_confirmation: passwordConfirmation,
       }),
-    }).then((res) => {
-      if (res.ok) {
-        res.json().then((user) => {
-          setUser(user);
-          navigate("/pharmacies");
-          localStorage.setItem("me", JSON.stringify(user));
-        });
-      }
-    });
+    })
+      .then((r) => {
+        if (r.ok) {
+          r.json().then((user) => {
+            setUser(user);
+            navigate("/pharmacies");
+            localStorage.setItem("me", JSON.stringify(user));
+          });
+        }
+      })
+      .catch((e) => {
+        console.log("error Sending Data" + e);
+      });
   }
   return (
     <form onSubmit={handleFormSubmit}>
@@ -45,6 +49,7 @@ export default function Register({ setUser }) {
           type="text"
           className="form-control"
           placeholder="Enter your name"
+          value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
@@ -55,6 +60,7 @@ export default function Register({ setUser }) {
           id="location"
           type="text"
           className="form-control"
+          value={location}
           placeholder="Enter your location"
           onChange={(e) => setLocation(e.target.value)}
           required
@@ -65,6 +71,7 @@ export default function Register({ setUser }) {
         <input
           id="email"
           type="email"
+          value={email}
           className="form-control"
           placeholder="Enter your email"
           onChange={(e) => setEmail(e.target.value)}
@@ -77,8 +84,9 @@ export default function Register({ setUser }) {
           id="phone_number"
           type="text"
           className="form-control"
+          value={phone_number}
           placeholder="Enter your phone number"
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={(e) => setPhone_Number(e.target.value)}
           required
         />
       </div>
@@ -89,6 +97,7 @@ export default function Register({ setUser }) {
           type="password"
           className="form-control"
           placeholder="Enter password"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
@@ -100,6 +109,7 @@ export default function Register({ setUser }) {
           type="password"
           className="form-control"
           placeholder="Confirm Password"
+          value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           required
         />
